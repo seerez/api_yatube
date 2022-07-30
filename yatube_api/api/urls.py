@@ -5,7 +5,11 @@ from rest_framework.authtoken import views
 from .views import CommentsViewSet, GroupsViewSet, PostsViewsSet
 
 v1_router = routers.DefaultRouter()
-v1_router.register('posts', PostsViewsSet)
+v1_router.register(
+    'posts',
+    PostsViewsSet,
+    basename='posts'
+)
 v1_router.register(
     'groups',
     GroupsViewSet,
